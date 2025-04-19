@@ -13,6 +13,11 @@ function App() {
   const opacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.05], [1, 0.98]);
 
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  }, []);
+
   // Detect active section on scroll
   useEffect(() => {
     const sections = ['home', 'about', 'skills', 'projects', 'experience', 'contact'];
@@ -75,6 +80,12 @@ function App() {
       tech: ["Node.js", "React JS", "MySQL"]
     },
     {
+      title: "Namma Kovai",
+      description: "Robust APIs and dashboard functionality using Node.js and React js for efficient sales management.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&w=500&q=60",
+      tech: ["Node.js", "React JS", "MySQL"]
+    },
+    {
       title: "AI Voice Agent",
       description: "Advanced conversational AI agents with natural language processing capabilities.",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&w=500&q=60",
@@ -92,7 +103,7 @@ function App() {
     {
       company: "Kambaa Incorporation",
       role: "Full Stack Developer",
-      period: "2023 - Present",
+      period: "2024 - Present",
       description: "Leading development of enterprise applications, implementing modern architectures and AI solutions."
     },
     // {
@@ -202,11 +213,11 @@ function App() {
                 className="text-dark-400 hover:text-primary-400 transition-colors duration-300">
                 <Github size={20} />
               </a>
-              <a href="www.linkedin.com/in/manojkumar-rajendran-36b8042a6" target="_blank" rel="noopener noreferrer" 
+              <a href="https://www.linkedin.com/in/manojkumar-rajendran-36b8042a6" target="_blank" rel="noopener noreferrer" 
                 className="text-dark-400 hover:text-primary-400 transition-colors duration-300">
                 <Linkedin size={20} />
               </a>
-              <a href="manojkumjarrajendran22@gmail.com" target="_blank" rel="noopener noreferrer" 
+              <a href="mailto:manojkumarrajendran22@gmail.com" target="_blank" rel="noopener noreferrer" 
                 className="text-dark-400 hover:text-primary-400 transition-colors duration-300">
                 <Mail size={20} />
               </a>
@@ -271,11 +282,11 @@ function App() {
                   className="text-dark-400 hover:text-primary-400 transition-colors">
                   <Github size={22} />
                 </a>
-                <a href="www.linkedin.com/in/manojkumar-rajendran-36b8042a6" target="_blank" rel="noopener noreferrer" 
+                <a href="https://www.linkedin.com/in/manojkumar-rajendran-36b8042a6" target="_blank" rel="noopener noreferrer" 
                   className="text-dark-400 hover:text-primary-400 transition-colors">
                   <Linkedin size={22} />
                 </a>
-                <a href="manojkumjarrajendran22@gmail.com" target="_blank" rel="noopener noreferrer" 
+                <a href="mailto:manojkumarrajendran22@gmail.com" target="_blank" rel="noopener noreferrer" 
                   className="text-dark-400 hover:text-primary-400 transition-colors">
                   <Mail size={22} />
                 </a>
