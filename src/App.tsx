@@ -31,7 +31,7 @@ function App() {
         
         const offsetTop = element.offsetTop;
         const offsetHeight = element.offsetHeight;
-        
+        ``
         if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
           setActiveSection(section);
           break;
@@ -305,16 +305,16 @@ function App() {
         <div className="absolute inset-0 bg-gradient-radial from-primary-400/5 to-transparent opacity-60"></div>
         <div className="max-w-6xl mx-auto text-center relative z-10">
           <motion.div 
-            className="mb-8"
+            className="mb-8 flex justify-center"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
           >
             <div className="relative inline-block">
               <img
-                src=""
+                src="/mk.jpg"
                 alt="Profile"
-                className="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-primary-400 shadow-glow"
+                className="w-40 h-40 rounded-full object-cover object-center border-4 border-primary-400 shadow-glow"
               />
               <motion.div 
                 className="absolute inset-0 rounded-full border-4 border-primary-400/30"
